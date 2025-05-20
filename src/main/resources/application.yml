@@ -35,7 +35,7 @@ spring:
 escola:
   jwt:
     secret-key: "m9RKGrevwI5/JRYIN82UMt39tOhz5P101pZrFMSiZcgSmjEeZJS2pZMEOTMRVFP3ZQRh/TkxgAaTPcYyP5HrBg=="
-    validity-in-ms: 3600000    # 1 hora
+    validity-in-ms: 3600000 # 1 hora
     refresh-validity-in-ms: 86400000  # 24 horas
 
 logging:

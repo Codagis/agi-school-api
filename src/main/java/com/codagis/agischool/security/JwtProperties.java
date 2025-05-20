@@ -11,6 +11,6 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "escola.jwt")
 public class JwtProperties {
     private String secretKey;
-    private long validityInMs = 3600000;    // 1 hora
-    private long refreshValidityInMs = 86400000;  // 24 horas
+    private long validityInMs = 3600000;
+    private long refreshValidityInMs = 86400000;
 }
