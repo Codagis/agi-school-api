@@ -1,0 +1,61 @@
+# application.yml
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/agischool_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080
+
+  main:
+    allow-bean-definition-overriding: true
+
+escola:
+  jwt:
+    secret-key: "m9RKGrevwI5/JRYIN82UMt39tOhz5P101pZrFMSiZcgSmjEeZJS2pZMEOTMRVFP3ZQRh/TkxgAaTPcYyP5HrBg=="
+    validity-in-ms: 3600000    # 1 hora
+    refresh-validity-in-ms: 86400000  # 24 horas
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+        web: DEBUG
+      hibernate: INFO
+    com:
+      codagis: DEBUG
+  file:
+    name: logs/agischool.log
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+server:
+  port: 8080
+  servlet:
+    context-path: /server
+  error:
+    include-message: always
+    include-binding-errors: always
