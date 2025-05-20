@@ -1,21 +1,15 @@
 package com.codagis.agischool.service;
 
 import com.codagis.agischool.dto.UsuarioCadastroDto;
-import com.codagis.agischool.enums.TipoPerfil;
-import com.codagis.agischool.exception.EmailJaCadastradoException;
-import com.codagis.agischool.exception.MatriculaJaCadastradaException;
-import com.codagis.agischool.model.Perfil;
+import com.codagis.agischool.exception.exceptions.EmailJaCadastradoException;
+import com.codagis.agischool.exception.exceptions.MatriculaJaCadastradaException;
 import com.codagis.agischool.model.Usuario;
 import com.codagis.agischool.repository.UsuarioRepository;
 
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

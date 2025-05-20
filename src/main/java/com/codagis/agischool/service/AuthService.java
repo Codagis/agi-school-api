@@ -3,7 +3,7 @@ package com.codagis.agischool.service;
 import com.codagis.agischool.dto.JwtResponse;
 import com.codagis.agischool.dto.LoginDto;
 import com.codagis.agischool.dto.RefreshTokenRequest;
-import com.codagis.agischool.exception.AutenticacaoException;
+import com.codagis.agischool.exception.exceptions.AutenticacaoException;
 import com.codagis.agischool.model.Usuario;
 import com.codagis.agischool.repository.UsuarioRepository;
 import com.codagis.agischool.security.JwtTokenProvider;
